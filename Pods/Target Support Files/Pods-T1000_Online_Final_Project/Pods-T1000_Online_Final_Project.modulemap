@@ -1,0 +1,6 @@
+framework module Pods_T1000_Online_Final_Project {
+  umbrella header "Pods-T1000_Online_Final_Project-umbrella.h"
+
+  export *
+  module * { export * }
+}
