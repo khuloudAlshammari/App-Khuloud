@@ -29,4 +29,22 @@
     
        *`
       ` * ![Uploading ‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ٧.٥٠.٠٩ م.png…]()*`
-
+      
+# this code is resposile for adding a comment in a post
+`* func addNewCommentToPost(postId: String, userId: String, message: String, completionHandler: @escaping () -> ()){
+        let url = "\(baseURL)/comment/create"
+        let params =
+        [
+         "post": postId,
+         "message": message,
+         "owner" : userId
+        ]
+        AF.request(url,  method: .post, parameters: params, encoder: JSONParameterEncoder.default, headers: headers).validate().responseJSON { response in
+            switch response.result{
+            case .success:
+                completionHandler()
+            case .failure (let error):
+                print(error)
+     * `
+`*<img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png">
+ *`
