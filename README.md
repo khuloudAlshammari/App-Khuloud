@@ -14,9 +14,10 @@
                 self.addButton.setTitle("Add", for: .normal)
                 NotificationCenter.default.post(name: NSNotification.Name("NewPostAdded"), object: nil,userInfo: nil)
                 self.dismiss(animated: true, completion: nil)
-        <img width="332" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١ ٢٠ ١٧ ص" src="https://user-images.githubusercontent.com/95877163/148755773-27a86706-a8f8-4418-a803-9d1c49ca8e00.png">
-}
-        }*`
+                
+      `  <img width="332" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١ ٢٠ ١٧ ص" src="https://user-images.githubusercontent.com/95877163/148755773-27a86706-a8f8-4418-a803-9d1c49ca8e00.png">
+
+        `
 # this code is responsible fo alert
 `*   var alert = UIAlertController(title:"Notic",message:"To be able to access your profil please log in login",preferredStyle:.alert)
             var action = UIAlertAction(title:"OK",style:.default ) { alert in
@@ -24,10 +25,10 @@
               self.present(vc!, animated: true, completion: nil)
             }
             alert.addAction(action)
-            self.present(alert,animated:true,completion:nil)
+            self.present(alert,animated:true,completion:nil)*`
         }
     
-       *`
+       
       ` ![Uploading ‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ٧.٥٠.٠٩ م.png…]()`
       
 # this code is resposile for adding a comment in a post
@@ -46,6 +47,7 @@
             case .failure (let error):
                 print(error)
      * `
+     
 ` <img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png"> `
  
 
