@@ -74,9 +74,10 @@ https://user-images.githubusercontent.com/95877163/148828788-3b0d1692-6ba5-41a5-
         }
     }`*
     
-     # This video summarizes som of the features of the application
+    
+  # This video summarizes som of the features of the application
    
-    `  
+    
 
 https://user-images.githubusercontent.com/95877163/148827409-2cd12799-fd2d-4beb-b1af-1f9bb0066d8e.mov
 
