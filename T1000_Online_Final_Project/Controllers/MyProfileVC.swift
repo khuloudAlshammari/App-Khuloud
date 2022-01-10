@@ -27,14 +27,29 @@ class MyProfileVC: UIViewController {
         setupUI()
       // loaderActivityIndictor.stopAnimating()
         if let userLogged = UserManager.loggedInUser {
-          // imagView.makeCircularImage()
+            // imagView.makeCircularImage()
             UserAPI.getUserData(id: userLogged.id) { UserResponse in
                 self.user = UserResponse
                 self.setupUI()
-        }
+            }
             
-           
-}
+        } else {
+            nameLabel.text = ""
+            firstNameTextField.text = ""
+            phoneTextField.text  = ""
+            imageUrlTextField.text = ""
+            
+            var alert = UIAlertController(title:"Notic",message:"To be able to access your profil please log in login",preferredStyle:.alert)
+            var action = UIAlertAction(title:"OK",style:.default ) { alert in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC")
+              self.present(vc!, animated: true, completion: nil)
+            }
+            alert.addAction(action)
+            self.present(alert,animated:true,completion:nil)
+        }
+    
+        
+
         
         // Do any additional setup after loading the view.
     }
@@ -42,13 +57,18 @@ class MyProfileVC: UIViewController {
        // imagView.makeCircularImage()
       //  if let user = UserManager.loggedInUser {
         //   imagView.makeCircularImage()
-          if let image = user.picture {
+          if let image = user?.picture {
                 imagView.convertImageFromStringUrl(stringOfUrl: image)
             }
-            nameLabel.text = user.firstName + " " + user.lastName
-            firstNameTextField.text = user.firstName
-            phoneTextField.text = user.phone
-            imageUrlTextField.text = user.picture
+        if user?.firstName != nil && user?.lastName != nil {
+            nameLabel.text = user.firstName + " " + user.lastName}
+        if user?.firstName != nil{
+            firstNameTextField.text = user.firstName}
+        if user?.phone != nil{
+            firstNameTextField.text = user.phone}
+        if user?.picture != nil{
+        
+            imageUrlTextField.text = user.picture}
         }
     
         
