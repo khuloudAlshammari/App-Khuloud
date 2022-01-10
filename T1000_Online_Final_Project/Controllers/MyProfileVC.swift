@@ -65,7 +65,7 @@ class MyProfileVC: UIViewController {
         if user?.firstName != nil{
             firstNameTextField.text = user.firstName}
         if user?.phone != nil{
-            firstNameTextField.text = user.phone}
+            phoneTextField.text = user.phone}
         if user?.picture != nil{
         
             imageUrlTextField.text = user.picture}
