@@ -48,3 +48,26 @@
      * `
 `*<img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png">
  *`
+
+# this code is responsible for bringing the tag,and when entering each tag ,you will find all the posts related to this tag
+*`func getAllTags(completionHandler: @escaping ([String]) -> ()){
+        let url = "\(baseURL)/tag"
+        AF.request(url, headers: headers).responseJSON { response in
+            let jsonData = JSON(response.value)
+            let data = jsonData["data"]
+            let decoder = JSONDecoder()
+            do {
+                let tags = try decoder.decode([String].self, from: data.rawData())
+                completionHandler(tags)
+            }
+            catch let error{
+                print(error)
+            }
+            print(data)
+        }
+    }`*
+    `  
+
+https://user-images.githubusercontent.com/95877163/148827409-2cd12799-fd2d-4beb-b1af-1f9bb0066d8e.mov
+
+    `
