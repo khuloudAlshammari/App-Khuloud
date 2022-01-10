@@ -1,11 +1,11 @@
 # App-Khuloud
 #The application is a program similar to the Twitter application so that a person can share posts and reply to a post
 **this code is responsible for logging in the user as a guest**
-`func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+`*func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "logoutSegue"{
-            UserManager.loggedInUser = nil`
+            UserManager.loggedInUser = nil*`
   # This code is responsible for adding a new post and an image
-  ` func addButtonClicked(_ sender: Any) {
+  `* func addButtonClicked(_ sender: Any) {
         if let user = UserManager.loggedInUser {
             addButton.setTitle("", for: .normal)
             loaderView.startAnimating()
@@ -16,9 +16,9 @@
                 self.dismiss(animated: true, completion: nil)
         <img width="332" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١ ٢٠ ١٧ ص" src="https://user-images.githubusercontent.com/95877163/148755773-27a86706-a8f8-4418-a803-9d1c49ca8e00.png">
 }
-        }`
+        }*`
 # this code is responsible fo alert
-`   var alert = UIAlertController(title:"Notic",message:"To be able to access your profil please log in login",preferredStyle:.alert)
+`*   var alert = UIAlertController(title:"Notic",message:"To be able to access your profil please log in login",preferredStyle:.alert)
             var action = UIAlertAction(title:"OK",style:.default ) { alert in
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC")
               self.present(vc!, animated: true, completion: nil)
@@ -27,6 +27,6 @@
             self.present(alert,animated:true,completion:nil)
         }
     
-       `
+       *`
       ` * ![Uploading ‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ٧.٥٠.٠٩ م.png…]()*`
 
