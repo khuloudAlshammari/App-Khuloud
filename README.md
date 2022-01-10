@@ -13,7 +13,7 @@
                 self.loaderView.stopAnimating()
                 self.addButton.setTitle("Add", for: .normal)
                 NotificationCenter.default.post(name: NSNotification.Name("NewPostAdded"), object: nil,userInfo: nil)
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)*`
                 
       `  <img width="332" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١ ٢٠ ١٧ ص" src="https://user-images.githubusercontent.com/95877163/148755773-27a86706-a8f8-4418-a803-9d1c49ca8e00.png">
 
@@ -49,6 +49,12 @@
      * `
      
 ` <img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png"> `
+`            
+
+https://user-images.githubusercontent.com/95877163/148828788-3b0d1692-6ba5-41a5-8832-f500fc261c11.mov
+
+ `
+` <img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png"> ` 
  
 
 # this code is responsible for bringing the tag,and when entering each tag ,you will find all the posts related to this tag
