@@ -47,8 +47,7 @@
             case .failure (let error):
                 print(error)
      * `
-     
-` <img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png"> `
+ 
 `            
 
 https://user-images.githubusercontent.com/95877163/148828788-3b0d1692-6ba5-41a5-8832-f500fc261c11.mov
