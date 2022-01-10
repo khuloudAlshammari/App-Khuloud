@@ -16,7 +16,7 @@ class MyProfileVC: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var imageUrlTextField: UITextField!
     @IBOutlet weak var loaderView: UIActivityIndicatorView!
-    
+     var user : User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +26,23 @@ class MyProfileVC: UIViewController {
        imageUrlTextField.isEnabled = true
         setupUI()
       // loaderActivityIndictor.stopAnimating()
-        
+        if let userLogged = UserManager.loggedInUser {
+          // imagView.makeCircularImage()
+            UserAPI.getUserData(id: userLogged.id) { UserResponse in
+                self.user = UserResponse
+                self.setupUI()
+        }
+            
+           
+}
         
         // Do any additional setup after loading the view.
     }
     func setupUI(){
        // imagView.makeCircularImage()
-        if let user = UserManager.loggedInUser {
-           imagView.makeCircularImage()
-            if let image = user.picture {
+      //  if let user = UserManager.loggedInUser {
+        //   imagView.makeCircularImage()
+          if let image = user.picture {
                 imagView.convertImageFromStringUrl(stringOfUrl: image)
             }
             nameLabel.text = user.firstName + " " + user.lastName
@@ -42,19 +50,19 @@ class MyProfileVC: UIViewController {
             phoneTextField.text = user.phone
             imageUrlTextField.text = user.picture
         }
-    }
+    
         
     @IBAction func submitButtonClicked(_ sender: Any) {
         guard let loggendin = UserManager.loggedInUser else{ return }
         
         UserAPI.updateUserInfo(userId: loggendin.id, firstName: firstNameTextField.text!, phone: phoneTextField.text!, imageUrl: imageUrlTextField.text!) { user, message in
                      // self.loaderView.stopAnimating()
-            if let reponseUser = user {
-                if let image = user?.picture{
-                self.imagView.convertImageFromStringUrl(stringOfUrl: image)
+        if let reponseUser = user {
+        if let image = user?.picture{
+        self.imagView.convertImageFromStringUrl(stringOfUrl: image)
             }
-                self.nameLabel.text = reponseUser.firstName + " " + reponseUser.lastName
-                self.phoneTextField.text = reponseUser.phone
+        self.nameLabel.text = reponseUser.firstName + " " + reponseUser.lastName
+        self.phoneTextField.text = reponseUser.phone
             }
         }
         var alert = UIAlertController(title:"أشعار",message:"تم التعديل",preferredStyle:.alert)
@@ -62,4 +70,5 @@ class MyProfileVC: UIViewController {
         alert.addAction(action)
         present(alert,animated:true,completion:nil)
     }
+
 }

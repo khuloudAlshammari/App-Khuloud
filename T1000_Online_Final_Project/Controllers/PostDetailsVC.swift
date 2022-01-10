@@ -9,6 +9,7 @@ import Alamofire
 import SwiftyJSON
 import NVActivityIndicatorView
 
+
 class PostDetailsVC: UIViewController {
     
     //MARK: OUTLETS
