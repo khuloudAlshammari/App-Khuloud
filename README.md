@@ -17,3 +17,14 @@
         <img width="332" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١ ٢٠ ١٧ ص" src="https://user-images.githubusercontent.com/95877163/148755773-27a86706-a8f8-4418-a803-9d1c49ca8e00.png">
 }
         }`
+# this code is responsible fo alert
+`   var alert = UIAlertController(title:"Notic",message:"To be able to access your profil please log in login",preferredStyle:.alert)
+            var action = UIAlertAction(title:"OK",style:.default ) { alert in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC")
+              self.present(vc!, animated: true, completion: nil)
+            }
+            alert.addAction(action)
+            self.present(alert,animated:true,completion:nil)
+        }
+    
+       `
