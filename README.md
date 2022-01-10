@@ -28,7 +28,7 @@
         }
     
        *`
-      ` * ![Uploading ‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ٧.٥٠.٠٩ م.png…]()*`
+      ` ![Uploading ‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ٧.٥٠.٠٩ م.png…]()`
       
 # this code is resposile for adding a comment in a post
 `* func addNewCommentToPost(postId: String, userId: String, message: String, completionHandler: @escaping () -> ()){
@@ -46,8 +46,8 @@
             case .failure (let error):
                 print(error)
      * `
-`*<img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png">
- *`
+` <img width="313" alt="‏لقطة الشاشة ١٤٤٣-٠٦-٠٧ في ١٠ ٠٨ ٣٥ م" src="https://user-images.githubusercontent.com/95877163/148825129-01a5f6c6-f4d0-461e-8158-45f279ac0715.png"> `
+ 
 
 # this code is responsible for bringing the tag,and when entering each tag ,you will find all the posts related to this tag
 *`func getAllTags(completionHandler: @escaping ([String]) -> ()){
